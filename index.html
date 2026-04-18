@@ -660,9 +660,12 @@ function showPhase(id,el){
 }
 function showDay(phase,day,el){
   const prefix=phase+'-';
-  document.querySelectorAll('[id^="'+prefix+'"]').forEach(d=>d.classList.remove('active'));
-  el.closest('.card').querySelectorAll('.day-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById(prefix+day).classList.add('active');
+  const phaseBlock=document.getElementById(phase);
+  if(!phaseBlock) return;
+  phaseBlock.querySelectorAll('.dc').forEach(d=>d.classList.remove('active'));
+  phaseBlock.querySelectorAll('.day-tab').forEach(t=>t.classList.remove('active'));
+  const target=document.getElementById(prefix+day);
+  if(target){target.classList.add('active');}
   el.classList.add('active');
 }
 function showFood(id,el){
