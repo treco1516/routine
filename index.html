@@ -13,27 +13,26 @@
     --red:#f87171;--radius:10px;
   }
   body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
-
   .header{padding:40px 24px 24px;max-width:960px;margin:0 auto}
-  .header h1{font-size:clamp(24px,5vw,38px);font-weight:800;letter-spacing:-1.5px;color:#fff}
+  .header h1{font-size:clamp(22px,5vw,36px);font-weight:800;letter-spacing:-1.5px;color:#fff}
   .header p{font-size:14px;color:var(--muted);margin-top:6px}
   .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;margin-top:20px}
   .metric{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center}
   .metric-val{font-size:17px;font-weight:700;color:#fff}
   .metric-lbl{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.05em}
-
   .nav{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
   .nav-inner{display:flex;max-width:960px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
   .nav-inner::-webkit-scrollbar{display:none}
-  .nav-btn{padding:14px 20px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border:none;background:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;flex-shrink:0}
+  .nav-btn{padding:14px 18px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border:none;background:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;flex-shrink:0}
   .nav-btn:hover{color:var(--text)}
   .nav-btn.active{color:#fff;border-bottom-color:var(--green)}
-
   .main{max-width:960px;margin:0 auto;padding:28px 24px 60px}
   .page{display:none}.page.active{display:block}
-
   .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:12px}
-
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+  .badge-green{background:var(--green-dim);color:var(--green);border:1px solid #2d6a3f}
+  .badge-amber{background:var(--amber-dim);color:var(--amber);border:1px solid #6a4a1a}
+  .badge-teal{background:var(--teal-dim);color:var(--teal);border:1px solid #0a4a5a}
   .tl{position:relative;padding-left:22px;margin-top:8px}
   .tl::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--border)}
   .tl-item{position:relative;margin-bottom:12px;padding:14px 16px;background:var(--bg3);border-radius:8px}
@@ -41,41 +40,27 @@
   .tl-month{font-size:13px;font-weight:700;color:#fff}
   .tl-desc{font-size:12px;color:var(--muted);margin-top:3px}
   .tl-kg{font-size:13px;font-weight:700;color:var(--green);margin-top:4px}
-
   .phase-sel{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
   .phase-btn{padding:7px 16px;border:1px solid var(--border);border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;background:var(--bg3);color:var(--muted);transition:all 0.2s}
-  .phase-btn:hover{color:var(--text);border-color:#555}
   .phase-btn.active{background:var(--green-dim);color:var(--green);border-color:var(--green)}
   .phase-block{display:none}.phase-block.active{display:block}
-
   .day-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
   .day-tab{padding:6px 14px;border:1px solid var(--border);border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;background:var(--bg3);color:var(--muted);transition:all 0.2s}
-  .day-tab:hover{color:var(--text)}
   .day-tab.active{background:var(--green-dim);color:var(--green);border-color:var(--green)}
-  .day-content{display:none}.day-content.active{display:block}
+  .dc{display:none}.dc.active{display:block}
   .day-label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
-
   .ex{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border)}
   .ex:last-child{border-bottom:none}
-  .ex-num{width:24px;height:24px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;color:var(--muted)}
+  .ex-num{width:22px;height:22px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;color:var(--muted)}
   .ex-body{flex:1}
   .ex-name{font-size:14px;font-weight:600;color:#fff}
   .ex-tip{font-size:12px;color:var(--muted);margin-top:2px}
   .ex-yt{font-size:11px;color:var(--teal);margin-top:4px;font-style:italic}
   .ex-sets{font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--bg3);border:1px solid var(--border);color:var(--text);flex-shrink:0;white-space:nowrap;margin-top:2px}
-
-  .badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:12px}
-  .badge-green{background:var(--green-dim);color:var(--green);border:1px solid #2d6a3f}
-  .badge-amber{background:var(--amber-dim);color:var(--amber);border:1px solid #6a4a1a}
-  .badge-teal{background:var(--teal-dim);color:var(--teal);border:1px solid #0a4a5a}
-
-  /* FOOD SUBTABS */
   .food-subtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
   .food-subtab{padding:8px 16px;border:1px solid var(--border);border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;background:var(--bg3);color:var(--muted);transition:all 0.2s}
-  .food-subtab:hover{color:var(--text)}
   .food-subtab.active{background:var(--amber-dim);color:var(--amber);border-color:var(--amber)}
   .food-section{display:none}.food-section.active{display:block}
-
   .meal-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
   .meal-num{width:30px;height:30px;border-radius:50%;background:var(--green-dim);border:1px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--green);flex-shrink:0}
   .meal-title{font-size:14px;font-weight:700;color:#fff}
@@ -86,17 +71,21 @@
   .qty-val{font-size:13px;font-weight:700;color:#fff}
   .qty-name{font-size:11px;color:var(--muted);margin-top:2px}
   .how{font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:8px}
-
   .tip{background:var(--green-dim);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:10px 14px;margin:12px 0;font-size:13px;color:#a7f3c0}
   .warn{background:#3a0f0f;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:10px 14px;margin:12px 0;font-size:13px;color:#fca5a5}
+  .info{background:var(--teal-dim);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:10px 14px;margin:12px 0;font-size:13px;color:#a5f3fc}
   .sec-header{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin:20px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
-
   .week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:12px 0}
   .week-day{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px}
   .week-day-name{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
   .week-day-content{font-size:12px;color:var(--text)}
   .week-day.rest{opacity:0.4}
-
+  .prot-table{width:100%;border-collapse:collapse;font-size:13px}
+  .prot-table th{text-align:left;padding:8px 10px;background:var(--bg3);color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em}
+  .prot-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+  .prot-table tr:last-child td{border-bottom:none}
+  .prot-val{font-weight:700;color:var(--green);white-space:nowrap}
+  .total-row td{background:var(--bg3);font-weight:700;color:#fff}
   @media(max-width:600px){
     .header{padding:24px 16px 16px}
     .main{padding:20px 16px 60px}
@@ -113,7 +102,7 @@
     <div class="metric"><div class="metric-val">~105kg</div><div class="metric-lbl">Peso actual</div></div>
     <div class="metric"><div class="metric-val">~85kg</div><div class="metric-lbl">Objetivo</div></div>
     <div class="metric"><div class="metric-val">1.82m</div><div class="metric-lbl">Altura</div></div>
-    <div class="metric"><div class="metric-val">5 días</div><div class="metric-lbl">Por semana</div></div>
+    <div class="metric"><div class="metric-val">5 días</div><div class="metric-lbl">Gym/semana</div></div>
     <div class="metric"><div class="metric-val">Mayo</div><div class="metric-lbl">Inicio</div></div>
     <div class="metric"><div class="metric-val">Octubre</div><div class="metric-lbl">Final</div></div>
   </div>
@@ -124,6 +113,7 @@
     <button class="nav-btn active" onclick="showPage('resumen',this)">Resumen</button>
     <button class="nav-btn" onclick="showPage('gym',this)">Rutina + videos</button>
     <button class="nav-btn" onclick="showPage('comida',this)">Comida</button>
+    <button class="nav-btn" onclick="showPage('proteina',this)">Proteína</button>
   </div>
 </nav>
 
@@ -131,22 +121,41 @@
 
 <!-- RESUMEN -->
 <div id="resumen" class="page active">
-  <div class="sec-header">Progreso estimado mes a mes</div>
+  <div class="sec-header">Progreso estimado</div>
   <div class="tip">Pésate cada lunes por la mañana en ayunas. Lo que importa es la tendencia del mes, no el día a día.</div>
   <div class="tl">
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">Mayo — Mes 1</div><div class="tl-desc">Adaptación. Primeros kilos bajando, en parte agua. Te costará ir, es normal.</div><div class="tl-kg">-2 a -4 kg</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">Junio — Mes 2</div><div class="tl-desc">Punto de quiebre. Quien llega aquí suele quedarse. Empiezas a notar algo en el espejo.</div><div class="tl-kg">-5 a -7 kg acumulados</div></div>
-    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-month">Julio — Mes 3 ☀️ Verano</div><div class="tl-desc">Cambio visible claro. Ropa más suelta, cara diferente. La gente empieza a notarlo.</div><div class="tl-kg" style="color:var(--amber)">-8 a -11 kg acumulados</div></div>
-    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-month">Agosto — Mes 4 ☀️ Pleno verano</div><div class="tl-desc">Momentum real. Energía alta, cardio fácil. Pecho y barriga notablemente mejores.</div><div class="tl-kg" style="color:var(--amber)">-11 a -14 kg acumulados</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-month">Julio — Mes 3 ☀️ Verano</div><div class="tl-desc">Cambio visible claro. Ropa más suelta, cara diferente.</div><div class="tl-kg" style="color:var(--amber)">-8 a -11 kg acumulados</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-month">Agosto — Mes 4 ☀️ Pleno verano</div><div class="tl-desc">Momentum real. Energía alta. Pecho y barriga notablemente mejores.</div><div class="tl-kg" style="color:var(--amber)">-11 a -14 kg acumulados</div></div>
     <div class="tl-item"><div class="tl-dot" style="background:var(--teal)"></div><div class="tl-month">Septiembre — Mes 5</div><div class="tl-desc">Definición muscular visible. Silueta muy diferente a mayo.</div><div class="tl-kg" style="color:var(--teal)">-14 a -17 kg acumulados</div></div>
     <div class="tl-item"><div class="tl-dot" style="background:var(--teal)"></div><div class="tl-month">Octubre — Mes 6 — Final</div><div class="tl-desc">Transformación completa. La mejor forma física de tu vida hasta ahora.</div><div class="tl-kg" style="color:var(--teal)">-15 a -20 kg acumulados</div></div>
   </div>
 
-  <div class="sec-header" style="margin-top:28px">Estructura del día</div>
-  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">10-11h — Almuerzo trabajo</div><div style="font-size:13px;color:var(--muted)">Galletas básicas + hummus. Sin cambios.</div></div>
-  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">15h — Comida principal</div><div style="font-size:13px;color:var(--muted)">Tupper con proteína + arroz o pasta + verdura. La más importante del día.</div></div>
-  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">20:30-21h — Cena</div><div style="font-size:13px;color:var(--muted)">Yogur griego + arándanos. Siempre, nunca saltarla.</div></div>
+  <div class="sec-header" style="margin-top:28px">Estructura del día — Lunes a Viernes</div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Antes de trabajar</div><div style="font-size:13px;color:var(--muted)">Avena 60g + yogur griego 200g</div></div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">En el trabajo — café + leche</div><div style="font-size:13px;color:var(--muted)">Café con 125ml leche entera + vaso leche fría 250ml</div></div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">10-11h — Almuerzo trabajo</div><div style="font-size:13px;color:var(--muted)">Pan de fibra y sésamo ×4 + hummus 2-3 cucharadas soperas + 2 huevos duros</div></div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">15h — Comida principal</div><div style="font-size:13px;color:var(--muted)">Pechuga 200g o picada ternera 200g + pasta integral 150g + verdura sin límite</div></div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Post 15h</div><div style="font-size:13px;color:var(--muted)">Yogur natural Hacendado 120g</div></div>
+  <div class="card"><div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Cena — 20:30-21h</div><div style="font-size:13px;color:var(--muted)">Yogur griego 200g. Siempre, nunca saltarla.</div></div>
   <div class="warn">Eliminado para siempre: palomitas de bolsa, pastel en casa, pan blanco de noche.</div>
+
+  <div class="sec-header" style="margin-top:28px">Estructura del día — Fin de semana</div>
+  <div class="card" style="border-color:#2d6a3f">
+    <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:10px">Sábado</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Desayuno (antes 11h) — Avena 60g + yogur griego 200g + 2 huevos revueltos</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Comida mediodía — Comida libre, lo que quieras en casa sin pasarte</div>
+    <div style="font-size:13px;color:var(--muted)">Cena — Yogur griego 200g</div>
+  </div>
+  <div class="card" style="border-color:var(--amber)">
+    <div style="font-size:13px;font-weight:700;color:var(--amber);margin-bottom:10px">Domingo</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Desayuno (antes 11h) — Avena 60g + yogur griego 200g + 2 huevos revueltos</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Comida mediodía — Pechuga o picada 200g + patata cocida 200g + ensalada</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">2 vasos de leche entera 500ml durante el día</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Tarde — Meal prep 1 hora</div>
+    <div style="font-size:13px;color:var(--muted)">Cena — Yogur griego 200g</div>
+  </div>
 
   <div class="sec-header" style="margin-top:28px">Semana de entrenamiento</div>
   <div class="tip">Semanas 1-2 de mayo solo 4 días (sin viernes). Semana 3 en adelante los 5.</div>
@@ -180,7 +189,7 @@
       <button class="day-tab" onclick="showDay('f1','v',this)">Viernes</button>
     </div>
     <div class="card">
-      <div id="f1-l" class="day-content active">
+      <div id="f1-l" class="dc active">
         <div class="day-label">Pecho + tríceps + cardio + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press banca con barra</div><div class="ex-tip">Agarre medio, bajar controlado hasta el pecho</div><div class="ex-yt">YouTube: "press banca barra tutorial español"</div></div><div class="ex-sets">3 × 10</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Press inclinado mancuernas</div><div class="ex-tip">Banco a 45°, trabaja la parte alta del pecho</div><div class="ex-yt">YouTube: "press inclinado mancuernas tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
@@ -189,7 +198,7 @@
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Caminata inclinada en cinta</div><div class="ex-tip">Inclinación 8-10, velocidad 5-6 km/h, no agarrarse</div><div class="ex-yt">YouTube: "caminata inclinada cinta quemar grasa tutorial"</div></div><div class="ex-sets">20 min</div></div>
         <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core: plancha frontal + crunch máquina</div><div class="ex-tip">Plancha 3×30 seg + crunch máquina 3×20</div><div class="ex-yt">YouTube: "plancha abdominal frontal correcta tutorial español"</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f1-ma" class="day-content">
+      <div id="f1-ma" class="dc">
         <div class="day-label">Pierna (volumen reducido) + core</div>
         <div class="tip" style="margin-bottom:10px">Tienes buenas piernas. Menos volumen aquí, más tiempo para cardio y core.</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Sentadilla en máquina Smith</div><div class="ex-tip">Pies al ancho de hombros, bajar hasta 90°</div><div class="ex-yt">YouTube: "sentadilla máquina smith tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
@@ -198,40 +207,40 @@
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Bicicleta estática o elíptica</div><div class="ex-tip">Ritmo moderado constante, zona 2</div></div><div class="ex-sets">20 min</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Core: crunch máquina + plancha lateral</div><div class="ex-tip">Crunch 3×20 + plancha lateral 3×25 seg cada lado</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f1-x" class="day-content">
+      <div id="f1-x" class="dc">
         <div class="day-label">Espalda + bíceps + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Jalón al pecho en polea</div><div class="ex-tip">Agarre ancho, llevar barra a la clavícula</div><div class="ex-yt">YouTube: "jalón al pecho polea tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Remo en máquina sentado</div><div class="ex-tip">Pecho pegado al soporte, codos atrás</div><div class="ex-yt">YouTube: "remo máquina sentado espalda tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
-        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Remo con mancuerna a una mano</div><div class="ex-tip">Apoyo en banco, espalda recta paralela al suelo</div><div class="ex-yt">YouTube: "remo mancuerna una mano tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
+        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Remo con mancuerna a una mano</div><div class="ex-tip">Apoyo en banco, espalda recta</div><div class="ex-yt">YouTube: "remo mancuerna una mano tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Curl bíceps con barra Z</div><div class="ex-tip">Codos pegados al cuerpo, no balancear</div><div class="ex-yt">YouTube: "curl bíceps barra Z tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Curl martillo con mancuernas</div><div class="ex-tip">Agarre neutro, alterno, codos fijos</div><div class="ex-yt">YouTube: "curl martillo mancuernas tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
-        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core: rueda abdominal de rodillas</div><div class="ex-tip">O crunch en polea si no llegas</div><div class="ex-yt">YouTube: "rueda abdominal rodillas tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
+        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core: rueda abdominal de rodillas</div><div class="ex-yt">YouTube: "rueda abdominal rodillas tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
       </div>
-      <div id="f1-j" class="day-content">
+      <div id="f1-j" class="dc">
         <div class="day-label">Hombros + core intenso</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press militar en máquina</div><div class="ex-tip">Espalda pegada al respaldo, no arquear</div><div class="ex-yt">YouTube: "press militar máquina hombros tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
-        <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Elevaciones laterales con mancuernas</div><div class="ex-tip">Codos ligeramente doblados, peso ligero al principio</div><div class="ex-yt">YouTube: "elevaciones laterales mancuernas tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
+        <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Elevaciones laterales con mancuernas</div><div class="ex-tip">Codos ligeramente doblados, peso ligero</div><div class="ex-yt">YouTube: "elevaciones laterales mancuernas tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
         <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Pájaros en polea baja</div><div class="ex-tip">Para el hombro posterior</div><div class="ex-yt">YouTube: "pájaros polea baja deltoides posterior tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
-        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Plancha frontal</div><div class="ex-tip">Cuerpo recto como tabla, no subir ni bajar cadera</div><div class="ex-yt">YouTube: "plancha abdominal frontal correcta tutorial español"</div></div><div class="ex-sets">3 × 35 seg</div></div>
-        <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Crunch en máquina abdominal</div><div class="ex-tip">Movimiento corto y controlado, sin tirar del cuello</div><div class="ex-yt">YouTube: "crunch máquina abdominal tutorial español"</div></div><div class="ex-sets">3 × 20</div></div>
-        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Plancha lateral</div><div class="ex-tip">Cada lado, cuerpo recto</div><div class="ex-yt">YouTube: "plancha lateral abdominal tutorial español"</div></div><div class="ex-sets">3 × 30 seg</div></div>
-        <div class="ex"><div class="ex-num">7</div><div class="ex-body"><div class="ex-name">Crunch de bicicleta en el suelo</div><div class="ex-tip">Codo al rodilla contraria, lento y controlado</div><div class="ex-yt">YouTube: "crunch bicicleta abdominales tutorial español"</div></div><div class="ex-sets">3 × 20</div></div>
+        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Plancha frontal</div><div class="ex-tip">Cuerpo recto, no subir ni bajar cadera</div><div class="ex-yt">YouTube: "plancha abdominal frontal correcta tutorial español"</div></div><div class="ex-sets">3 × 35 seg</div></div>
+        <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Crunch en máquina abdominal</div><div class="ex-yt">YouTube: "crunch máquina abdominal tutorial español"</div></div><div class="ex-sets">3 × 20</div></div>
+        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Plancha lateral</div><div class="ex-yt">YouTube: "plancha lateral abdominal tutorial español"</div></div><div class="ex-sets">3 × 30 seg</div></div>
+        <div class="ex"><div class="ex-num">7</div><div class="ex-body"><div class="ex-name">Crunch de bicicleta en el suelo</div><div class="ex-yt">YouTube: "crunch bicicleta abdominales tutorial español"</div></div><div class="ex-sets">3 × 20</div></div>
       </div>
-      <div id="f1-v" class="day-content">
+      <div id="f1-v" class="dc">
         <div class="day-label">Pecho extra + cardio largo + core</div>
         <div class="tip" style="margin-bottom:10px">Sesión extra de pecho. Aquí atacas directamente la zona que más te preocupa.</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Sentadilla goblet con mancuerna</div><div class="ex-tip">Calentamiento ligero</div><div class="ex-yt">YouTube: "sentadilla goblet mancuerna tutorial español"</div></div><div class="ex-sets">2 × 15</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Press banca mancuernas agarre neutro</div><div class="ex-tip">Mancuernas paralelas, más suave para el hombro</div><div class="ex-yt">YouTube: "press banca mancuernas agarre neutro tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
-        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Aperturas con mancuernas en banco plano</div><div class="ex-tip">Movimiento de abrazo, codos semiflexionados</div><div class="ex-yt">YouTube: "aperturas mancuernas banco plano pecho tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
-        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Jalón polea agarre estrecho supino</div><div class="ex-tip">Palmas hacia ti, codos al cuerpo al bajar</div><div class="ex-yt">YouTube: "jalón polea agarre estrecho supino tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
-        <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Caminata inclinada o bicicleta</div><div class="ex-tip">Ritmo moderado constante</div></div><div class="ex-sets">30 min</div></div>
-        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core final: plancha + crunch máquina</div><div class="ex-tip">Plancha 3×35 seg + crunch 3×20</div></div><div class="ex-sets">10 min</div></div>
+        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Aperturas con mancuernas en banco plano</div><div class="ex-yt">YouTube: "aperturas mancuernas banco plano pecho tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
+        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Jalón polea agarre estrecho supino</div><div class="ex-yt">YouTube: "jalón polea agarre estrecho supino tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
+        <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Caminata inclinada o bicicleta</div></div><div class="ex-sets">30 min</div></div>
+        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core final: plancha + crunch máquina</div></div><div class="ex-sets">10 min</div></div>
       </div>
     </div>
   </div>
 
   <div id="f2" class="phase-block">
-    <span class="badge badge-amber">Intensificación · 4 series · descanso 75 seg · más peso</span>
+    <span class="badge badge-amber">Intensificación · 4 series · descanso 75 seg</span>
     <div class="tip">Ejercicios marcados con ⚠️ — ver vídeo en YouTube ANTES de hacerlos por primera vez.</div>
     <div class="day-tabs">
       <button class="day-tab active" onclick="showDay('f2','l',this)">Lunes</button>
@@ -241,25 +250,25 @@
       <button class="day-tab" onclick="showDay('f2','v',this)">Viernes</button>
     </div>
     <div class="card">
-      <div id="f2-l" class="day-content active">
-        <div class="day-label">Pecho + tríceps intensificado</div>
+      <div id="f2-l" class="dc active">
+        <div class="day-label">Pecho + tríceps</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press banca con barra</div><div class="ex-tip">Intenta subir 2.5kg cada semana</div></div><div class="ex-sets">4 × 8</div></div>
-        <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Press inclinado mancuernas</div><div class="ex-tip">Más peso que en fase 1</div></div><div class="ex-sets">4 × 10</div></div>
+        <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Press inclinado mancuernas</div></div><div class="ex-sets">4 × 10</div></div>
         <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Aperturas en polea baja</div></div><div class="ex-sets">4 × 12</div></div>
-        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Fondos en paralelas asistidos</div><div class="ex-tip">Máquina asistida si no llegas solo</div><div class="ex-yt">YouTube: "fondos paralelas asistidos máquina tutorial español"</div></div><div class="ex-sets">3 × 10</div></div>
+        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Fondos en paralelas asistidos</div><div class="ex-yt">YouTube: "fondos paralelas asistidos máquina tutorial español"</div></div><div class="ex-sets">3 × 10</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Pushdown en polea con cuerda</div><div class="ex-yt">YouTube: "pushdown polea cuerda tríceps tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
-        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">HIIT en bici — 30 seg fuerte / 90 seg suave</div></div><div class="ex-sets">15 min</div></div>
+        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">HIIT bici — 30 seg fuerte / 90 seg suave</div></div><div class="ex-sets">15 min</div></div>
         <div class="ex"><div class="ex-num">7</div><div class="ex-body"><div class="ex-name">Core: plancha + crunch máquina</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f2-ma" class="day-content">
+      <div id="f2-ma" class="dc">
         <div class="day-label">Pierna + glúteo (reducido) + core</div>
-        <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Sentadilla libre con barra</div><div class="ex-tip">Si te sientes cómodo, si no continúa en Smith</div><div class="ex-yt">YouTube: "sentadilla libre barra técnica tutorial español"</div></div><div class="ex-sets">4 × 10</div></div>
+        <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Sentadilla libre con barra</div><div class="ex-yt">YouTube: "sentadilla libre barra técnica tutorial español"</div></div><div class="ex-sets">4 × 10</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">⚠️ Peso muerto rumano</div><div class="ex-tip">VER VIDEO ANTES. Caderas atrás, espalda neutra.</div><div class="ex-yt">YouTube: "peso muerto rumano técnica correcta tutorial español"</div></div><div class="ex-sets">3 × 10</div></div>
         <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">⚠️ Hip thrust en banco</div><div class="ex-tip">VER VIDEO ANTES. Barra en cadera, empuje arriba.</div><div class="ex-yt">YouTube: "hip thrust banco barra tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Cardio zona 2</div></div><div class="ex-sets">20 min</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Core: rueda abdominal + plancha lateral</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f2-x" class="day-content">
+      <div id="f2-x" class="dc">
         <div class="day-label">Espalda + bíceps + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">⚠️ Peso muerto convencional</div><div class="ex-tip">VER VIDEO ANTES. Espalda neutra siempre.</div><div class="ex-yt">YouTube: "peso muerto convencional técnica correcta tutorial español"</div></div><div class="ex-sets">4 × 8</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Jalón al pecho agarre ancho</div></div><div class="ex-sets">4 × 10</div></div>
@@ -268,18 +277,18 @@
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Curl concentrado mancuerna</div><div class="ex-yt">YouTube: "curl concentrado mancuerna bíceps tutorial español"</div></div><div class="ex-sets">3 × 12</div></div>
         <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core: crunch bicicleta + plancha frontal</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f2-j" class="day-content">
+      <div id="f2-j" class="dc">
         <div class="day-label">Hombros + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press militar con barra de pie</div><div class="ex-yt">YouTube: "press militar barra de pie técnica tutorial español"</div></div><div class="ex-sets">4 × 8</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Elevaciones laterales</div></div><div class="ex-sets">4 × 15</div></div>
         <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">⚠️ Face pull en polea</div><div class="ex-tip">VER VIDEO ANTES. Fundamental para salud del hombro.</div><div class="ex-yt">YouTube: "face pull polea hombro tutorial español"</div></div><div class="ex-sets">4 × 15</div></div>
-        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Circuito core completo</div><div class="ex-tip">Plancha 40 seg + plancha lateral 30 seg + crunch máquina 20 + crunch bicicleta 20</div></div><div class="ex-sets">3 rondas</div></div>
+        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Circuito core</div><div class="ex-tip">Plancha 40 seg + plancha lateral 30 seg + crunch máquina 20 + crunch bicicleta 20</div></div><div class="ex-sets">3 rondas</div></div>
       </div>
-      <div id="f2-v" class="day-content">
+      <div id="f2-v" class="dc">
         <div class="day-label">Pecho extra + cardio + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press banca mancuernas agarre neutro</div></div><div class="ex-sets">4 × 10</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Aperturas mancuernas banco plano</div></div><div class="ex-sets">4 × 12</div></div>
-        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Crossover en polea alta</div><div class="ex-tip">Para la parte baja del pecho</div><div class="ex-yt">YouTube: "crossover polea alta pecho tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
+        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Crossover en polea alta</div><div class="ex-yt">YouTube: "crossover polea alta pecho tutorial español"</div></div><div class="ex-sets">3 × 15</div></div>
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Jalón polea agarre estrecho</div></div><div class="ex-sets">3 × 12</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Caminata inclinada o bicicleta</div></div><div class="ex-sets">30 min</div></div>
         <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">Core final</div></div><div class="ex-sets">10 min</div></div>
@@ -288,7 +297,7 @@
   </div>
 
   <div id="f3" class="phase-block">
-    <span class="badge badge-teal">Definición · 4-5 series · descanso 60 seg · superseries · cardio máximo</span>
+    <span class="badge badge-teal">Definición · 4-5 series · descanso 60 seg · superseries</span>
     <div class="day-tabs">
       <button class="day-tab active" onclick="showDay('f3','l',this)">Lunes</button>
       <button class="day-tab" onclick="showDay('f3','ma',this)">Martes</button>
@@ -297,17 +306,17 @@
       <button class="day-tab" onclick="showDay('f3','v',this)">Viernes</button>
     </div>
     <div class="card">
-      <div id="f3-l" class="day-content active">
+      <div id="f3-l" class="dc active">
         <div class="day-label">Pecho + tríceps + HIIT</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press banca con barra</div><div class="ex-tip">Máximo peso con buena técnica</div></div><div class="ex-sets">5 × 6</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Press inclinado mancuernas</div></div><div class="ex-sets">4 × 10</div></div>
-        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Aperturas polea + crossover superserie</div><div class="ex-tip">Sin descanso entre los dos ejercicios</div></div><div class="ex-sets">3 × 12+12</div></div>
+        <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Aperturas polea + crossover superserie</div><div class="ex-tip">Sin descanso entre los dos</div></div><div class="ex-sets">3 × 12+12</div></div>
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Fondos en paralelas</div></div><div class="ex-sets">4 × 12</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Pushdown + press francés superserie</div></div><div class="ex-sets">3 × 12+12</div></div>
-        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">HIIT bici o cinta — 1 min fuerte / 1 min suave</div></div><div class="ex-sets">20 min</div></div>
+        <div class="ex"><div class="ex-num">6</div><div class="ex-body"><div class="ex-name">HIIT — 1 min fuerte / 1 min suave</div></div><div class="ex-sets">20 min</div></div>
         <div class="ex"><div class="ex-num">7</div><div class="ex-body"><div class="ex-name">Core circuito completo</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f3-ma" class="day-content">
+      <div id="f3-ma" class="dc">
         <div class="day-label">Pierna mínima + cardio + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Sentadilla libre con barra</div></div><div class="ex-sets">4 × 8</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Hip thrust con barra</div></div><div class="ex-sets">4 × 12</div></div>
@@ -315,7 +324,7 @@
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Cardio zona 2</div></div><div class="ex-sets">25 min</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Core intenso</div></div><div class="ex-sets">15 min</div></div>
       </div>
-      <div id="f3-x" class="day-content">
+      <div id="f3-x" class="dc">
         <div class="day-label">Espalda + bíceps + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Peso muerto convencional</div></div><div class="ex-sets">5 × 5</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Dominadas asistidas</div><div class="ex-yt">YouTube: "dominadas asistidas máquina tutorial español"</div></div><div class="ex-sets">4 × 10</div></div>
@@ -323,14 +332,14 @@
         <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Curl bíceps + curl martillo superserie</div></div><div class="ex-sets">3 × 10+10</div></div>
         <div class="ex"><div class="ex-num">5</div><div class="ex-body"><div class="ex-name">Core: rueda abdominal + crunch bicicleta</div></div><div class="ex-sets">10 min</div></div>
       </div>
-      <div id="f3-j" class="day-content">
+      <div id="f3-j" class="dc">
         <div class="day-label">Hombros + core máximo</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press militar barra de pie</div></div><div class="ex-sets">5 × 6</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Elevaciones laterales — serie descendente al final</div></div><div class="ex-sets">5 × 12</div></div>
         <div class="ex"><div class="ex-num">3</div><div class="ex-body"><div class="ex-name">Face pull en polea</div></div><div class="ex-sets">4 × 15</div></div>
-        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Circuito core</div><div class="ex-tip">Plancha 45 seg + plancha lateral 35 seg + crunch máquina 25 + crunch bicicleta 25 + rueda abdominal 12</div></div><div class="ex-sets">3 rondas</div></div>
+        <div class="ex"><div class="ex-num">4</div><div class="ex-body"><div class="ex-name">Circuito core completo</div><div class="ex-tip">Plancha 45 seg + plancha lateral 35 seg + crunch máquina 25 + crunch bicicleta 25 + rueda abdominal 12</div></div><div class="ex-sets">3 rondas</div></div>
       </div>
-      <div id="f3-v" class="day-content">
+      <div id="f3-v" class="dc">
         <div class="day-label">Pecho intenso + cardio largo + core</div>
         <div class="ex"><div class="ex-num">1</div><div class="ex-body"><div class="ex-name">Press banca mancuernas</div></div><div class="ex-sets">4 × 10</div></div>
         <div class="ex"><div class="ex-num">2</div><div class="ex-body"><div class="ex-name">Aperturas + crossover superserie</div></div><div class="ex-sets">4 × 12+12</div></div>
@@ -342,252 +351,296 @@
   </div>
 </div>
 
-<!-- COMIDA (página única con subtabs internos) -->
+<!-- COMIDA -->
 <div id="comida" class="page">
   <div class="food-subtabs">
-    <button class="food-subtab active" onclick="showFood('almuerzo',this)">Almuerzo</button>
-    <button class="food-subtab" onclick="showFood('comida15',this)">Comida 15h</button>
-    <button class="food-subtab" onclick="showFood('cena',this)">Cena</button>
+    <button class="food-subtab active" onclick="showFood('semana',this)">L-V</button>
     <button class="food-subtab" onclick="showFood('finde',this)">Finde</button>
     <button class="food-subtab" onclick="showFood('hambre',this)">Si tienes hambre</button>
     <button class="food-subtab" onclick="showFood('prep',this)">Meal prep domingo</button>
   </div>
 
-  <!-- ALMUERZO -->
-  <div id="almuerzo" class="food-section active">
-    <div class="tip">Primera comida del día. Ligera para no llenarte antes de las 15h. El bote de hummus en el trabajo, comes un poco cada día sin terminarlo de golpe.</div>
+  <div id="semana" class="food-section active">
+    <div class="tip">Todos los valores de proteína y kcal calculados con las etiquetas reales de tus productos.</div>
+
+    <div class="sec-header">Antes de trabajar</div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">Galletas básicas + hummus</div><div class="meal-sub">Lo que ya haces — no cambiar nada</div></div><span class="meal-time">0 min</span></div>
+      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">Avena + yogur griego</div><div class="meal-sub">Primera comida del día</div></div></div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">4-5 unidades</div><div class="qty-name">Galletas básicas sin sal</div></div>
-        <div class="qty-box"><div class="qty-val">2-3 cucharadas soperas</div><div class="qty-name">Hummus (cuchara grande, la de sopa)</div></div>
+        <div class="qty-box"><div class="qty-val">60g</div><div class="qty-name">Avena Brüggen → ~8g prot · 225 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego 1kg → ~12g prot · 120 kcal</div></div>
       </div>
-      <div class="how">Nada que preparar. Bote en el trabajo, comes y sigues.</div>
+      <div class="how">Avena con un poco de leche caliente o fría. Yogur al lado o mezclado. Total: ~20g proteína · ~345 kcal</div>
+    </div>
+
+    <div class="sec-header">En el trabajo — bebidas</div>
+    <div class="card">
+      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Café + vaso de leche fría</div><div class="meal-sub">Durante la mañana</div></div></div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">125ml</div><div class="qty-name">Leche entera en café → ~4g prot · 79 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">250ml</div><div class="qty-name">Vaso leche fría → ~8g prot · 158 kcal</div></div>
+      </div>
+      <div class="how">Total: ~12g proteína · ~237 kcal</div>
+    </div>
+
+    <div class="sec-header">Almuerzo — 10-11h</div>
+    <div class="card">
+      <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">Pan de fibra + hummus + 2 huevos duros</div><div class="meal-sub">Prepara los huevos el domingo</div></div><span class="meal-time">0 min en el trabajo</span></div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">4 unidades</div><div class="qty-name">Pan fibra y sésamo → ~5g prot · 152 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">2-3 cucharadas soperas</div><div class="qty-name">Hummus Hacendado → ~6g prot · ~75 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">2 unidades</div><div class="qty-name">Huevos duros → ~14g prot · 140 kcal</div></div>
+      </div>
+      <div class="how">Total: ~25g proteína · ~367 kcal. Los huevos los llevas cocidos del domingo.</div>
+    </div>
+
+    <div class="sec-header">Comida principal — 15h</div>
+    <div class="card">
+      <div class="meal-header"><div class="meal-num">A</div><div><div class="meal-title">Días de pechuga de pollo</div><div class="meal-sub">Lunes, martes, miércoles</div></div><span class="meal-time">Tupper del meal prep</span></div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Pechuga pollo → ~42g prot · 196 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">150g</div><div class="qty-name">Pasta integral (seco) → ~20g prot · 518 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">Sin límite</div><div class="qty-name">Verdura + tomate + aceite oliva</div></div>
+      </div>
+      <div class="how">Total aprox: ~62g proteína · ~714 kcal + aceite y verdura ~100 kcal más</div>
     </div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Galletas + hummus + atún al natural</div><div class="meal-sub">Versión con proteína extra</div></div><span class="meal-time">0 min</span></div>
+      <div class="meal-header"><div class="meal-num">B</div><div><div class="meal-title">Días de carne picada de ternera</div><div class="meal-sub">Jueves, viernes</div></div><span class="meal-time">Tupper del meal prep</span></div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">4-5 unidades</div><div class="qty-name">Galletas básicas</div></div>
-        <div class="qty-box"><div class="qty-val">2 cucharadas soperas</div><div class="qty-name">Hummus</div></div>
-        <div class="qty-box"><div class="qty-val">1 lata (60g escurrido)</div><div class="qty-name">Atún al natural</div></div>
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Picada ternera → ~47g prot · 284 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">150g</div><div class="qty-name">Pasta integral (seco) → ~20g prot · 518 kcal</div></div>
+        <div class="qty-box"><div class="qty-val">4 cdas soperas</div><div class="qty-name">Tomate frito de bote</div></div>
       </div>
-      <div class="how">Abre la lata, escurre el agua, pon el atún encima de las galletas con el hummus.</div>
+      <div class="how">Total aprox: ~67g proteína · ~802 kcal + aceite y verdura ~100 kcal más</div>
     </div>
+
+    <div class="sec-header">Post comida — 15h</div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">Yogur griego + fruta</div><div class="meal-sub">Para días que no tengas galletas</div></div><span class="meal-time">0 min</span></div>
+      <div class="meal-header"><div class="meal-num">4</div><div><div class="meal-title">Yogur natural Hacendado</div><div class="meal-sub">Después de comer, no en lugar de</div></div></div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">1 unidad (125g)</div><div class="qty-name">Yogur griego 0%</div></div>
-        <div class="qty-box"><div class="qty-val">1 pieza mediana</div><div class="qty-name">Manzana o naranja</div></div>
+        <div class="qty-box"><div class="qty-val">1 unidad (120g)</div><div class="qty-name">Yogur natural → ~12g prot · 62 kcal</div></div>
       </div>
-      <div class="how">Lo metes en el bolso por la mañana. Aguanta hasta las 15h sin problema.</div>
+    </div>
+
+    <div class="sec-header">Cena — 20:30-21h</div>
+    <div class="warn">Nunca saltarla. Nunca palomitas, pastel ni pan blanco de noche.</div>
+    <div class="card">
+      <div class="meal-header"><div class="meal-num">5</div><div><div class="meal-title">Yogur griego</div><div class="meal-sub">La cena principal — la caseína se absorbe despacio durante la noche, ideal para el músculo</div></div><span class="meal-time">0 min</span></div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego 1kg → ~12g prot · 120 kcal</div></div>
+      </div>
+    </div>
+
+    <div class="sec-header">Resumen del día — valores reales</div>
+    <div class="card">
+      <table class="prot-table">
+        <tr><th>Comida</th><th>Proteína</th><th>Kcal</th></tr>
+        <tr><td>Avena + yogur griego</td><td class="prot-val">~20g</td><td>~345</td></tr>
+        <tr><td>Café + vaso leche fría</td><td class="prot-val">~12g</td><td>~237</td></tr>
+        <tr><td>Pan fibra + hummus + 2 huevos</td><td class="prot-val">~25g</td><td>~367</td></tr>
+        <tr><td>Comida 15h (días pollo)</td><td class="prot-val">~62g</td><td>~814</td></tr>
+        <tr><td>Yogur natural post 15h</td><td class="prot-val">~12g</td><td>~62</td></tr>
+        <tr><td>Yogur griego cena</td><td class="prot-val">~12g</td><td>~120</td></tr>
+        <tr class="total-row"><td>Total días pollo</td><td class="prot-val" style="color:var(--green)">~143g</td><td>~1,945</td></tr>
+        <tr class="total-row"><td>Total días ternera</td><td class="prot-val" style="color:var(--green)">~148g</td><td>~2,033</td></tr>
+      </table>
+      <div class="tip" style="margin-top:10px">Con verduras, tomate y aceite de cocinar llegas a ~2,100-2,200 kcal. Déficit de ~600-800 kcal respecto a tu gasto diario. Perfecto para bajar grasa de forma sostenida.</div>
     </div>
   </div>
 
-  <!-- COMIDA 15H -->
-  <div id="comida15" class="food-section">
-    <div class="tip">La comida más importante del día. Siempre: proteína + carbohidrato + algo verde. Nunca saltársela.</div>
-    <div class="sec-header">Con pechuga de pollo</div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">A1</div><div><div class="meal-title">Pechuga a la plancha + arroz + tomate frito</div><div class="meal-sub">El clásico, nunca falla</div></div><span class="meal-time">15 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Pechuga (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Arroz (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">4 cucharadas soperas</div><div class="qty-name">Tomate frito de bote</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharada sopera</div><div class="qty-name">Aceite de oliva</div></div>
-      </div>
-      <div class="how">Plancha con aceite 4-5 min por lado. Arroz hervido 18 min. Junta todo con tomate frito.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">A2</div><div><div class="meal-title">Pechuga al horno + patata + ensalada</div><div class="meal-sub">Más saciante, ideal días de pierna</div></div><span class="meal-time">30 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Pechuga (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Patata (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">1 puñado grande</div><div class="qty-name">Lechuga o mezcla</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharada sopera</div><div class="qty-name">Aceite de oliva</div></div>
-      </div>
-      <div class="how">Pechuga al horno 200° con ajo y orégano 20 min. Patata cocida 15 min. Ensalada al lado.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">A3</div><div><div class="meal-title">Pechuga + pasta + verdura salteada</div><div class="meal-sub">Versión más completa</div></div><span class="meal-time">20 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Pechuga (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Pasta (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">1/2 unidad</div><div class="qty-name">Pimiento rojo o verde</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharada sopera</div><div class="qty-name">Aceite de oliva</div></div>
-      </div>
-      <div class="how">Hierve pasta 10 min. Saltea pimiento con ajo y aceite 5 min. Junta todo.</div>
-    </div>
-    <div class="sec-header">Con carne picada de ternera</div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">B1</div><div><div class="meal-title">Boloñesa rápida con pasta</div><div class="meal-sub">Haz 1kg el domingo para toda la semana</div></div><span class="meal-time">15 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Carne picada (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Pasta (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">4 cucharadas soperas</div><div class="qty-name">Tomate frito de bote</div></div>
-        <div class="qty-box"><div class="qty-val">1 diente</div><div class="qty-name">Ajo picado</div></div>
-      </div>
-      <div class="how">Sofríe carne con ajo 5-7 min. Añade tomate, mezcla. Junta con pasta hervida.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">B2</div><div><div class="meal-title">Picada salteada con arroz y pimiento</div><div class="meal-sub">Fácil y sabroso</div></div><span class="meal-time">15 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Carne picada (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Arroz (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">1/2 unidad</div><div class="qty-name">Pimiento rojo</div></div>
-        <div class="qty-box"><div class="qty-val">1/2 unidad</div><div class="qty-name">Cebolla</div></div>
-      </div>
-      <div class="how">Sofríe cebolla y pimiento 3 min. Añade la carne hasta que esté hecha. Sobre el arroz hervido.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">B3</div><div><div class="meal-title">Picada + huevo encima + arroz</div><div class="meal-sub">Extra proteína, muy saciante</div></div><span class="meal-time">15 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">130g</div><div class="qty-name">Carne picada (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Arroz (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">1-2 unidades</div><div class="qty-name">Huevos</div></div>
-        <div class="qty-box"><div class="qty-val">3 cucharadas soperas</div><div class="qty-name">Tomate frito de bote</div></div>
-      </div>
-      <div class="how">Haz la picada con tomate. Fríe los huevos y ponlos encima. Todo sobre el arroz.</div>
-    </div>
-  </div>
-
-  <!-- CENA -->
-  <div id="cena" class="food-section">
-    <div class="tip">Ligera pero siempre existe. Nunca saltarla.</div>
-    <div class="warn">Nunca en la cena: palomitas, pastel, pan blanco solo, galletas dulces. Si tienes ansiedad agarra el yogur directamente de la nevera.</div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">Yogur griego + arándanos</div><div class="meal-sub">La opción principal — sin cocinar</div></div><span class="meal-time">0 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">1 unidad (125g)</div><div class="qty-name">Yogur griego 0%</div></div>
-        <div class="qty-box"><div class="qty-val">80-100g</div><div class="qty-name">Arándanos</div></div>
-      </div>
-      <div class="how">Abre, mezcla, come. El dulce natural corta el antojo nocturno.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Tortilla de 3 huevos con tomate</div><div class="meal-sub">Cuando necesitas algo caliente</div></div><span class="meal-time">5 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">3 unidades</div><div class="qty-name">Huevos</div></div>
-        <div class="qty-box"><div class="qty-val">1 tomate mediano</div><div class="qty-name">En rodajas</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharadita</div><div class="qty-name">Aceite oliva (cuchara pequeña de café)</div></div>
-      </div>
-      <div class="how">Bate huevos con sal. Sartén a fuego medio, 2 min por lado. Tomate al lado con sal.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">Pechuga sobrante + ensalada</div><div class="meal-sub">Aprovecha el meal prep del domingo</div></div><span class="meal-time">2 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">100g</div><div class="qty-name">Pechuga ya cocinada</div></div>
-        <div class="qty-box"><div class="qty-val">1 puñado grande</div><div class="qty-name">Lechuga o mezcla</div></div>
-        <div class="qty-box"><div class="qty-val">1 tomate</div><div class="qty-name">En trozos</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharada sopera</div><div class="qty-name">Aceite de oliva</div></div>
-      </div>
-      <div class="how">Saca del tupper, corta, pon sobre la ensalada. Aceite y sal. Sin calentar si no quieres.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">4</div><div><div class="meal-title">Huevos revueltos + pan integral</div><div class="meal-sub">Para cuando tienes más hambre</div></div><span class="meal-time">5 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">3 unidades</div><div class="qty-name">Huevos</div></div>
-        <div class="qty-box"><div class="qty-val">1 rebanada</div><div class="qty-name">Pan integral de molde</div></div>
-        <div class="qty-box"><div class="qty-val">1 cucharadita</div><div class="qty-name">Aceite de oliva</div></div>
-      </div>
-      <div class="how">Bate huevos, sartén a fuego bajo con aceite, remueve despacio. Pan tostado al lado.</div>
-    </div>
-  </div>
-
-  <!-- FINDE -->
   <div id="finde" class="food-section">
-    <div class="sec-header">Desayuno — antes de las 11h siempre</div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">Huevos revueltos + pan integral tostado</div><div class="meal-sub">El más completo</div></div><span class="meal-time">10 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">3 unidades</div><div class="qty-name">Huevos</div></div>
-        <div class="qty-box"><div class="qty-val">2 rebanadas</div><div class="qty-name">Pan integral tostado</div></div>
-        <div class="qty-box"><div class="qty-val">1 taza</div><div class="qty-name">Café o té</div></div>
-      </div>
-      <div class="how">Huevos revueltos a fuego bajo. Pan tostado. Come tranquilo, no tienes prisa el finde.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Avena + leche + 2 huevos duros</div><div class="meal-sub">Ideal si entrenas el sábado</div></div><span class="meal-time">10 min</span></div>
-      <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">60g</div><div class="qty-name">Avena en copos</div></div>
-        <div class="qty-box"><div class="qty-val">200ml</div><div class="qty-name">Leche semidesnatada</div></div>
-        <div class="qty-box"><div class="qty-val">2 unidades</div><div class="qty-name">Huevos duros</div></div>
-      </div>
-      <div class="how">Avena con leche caliente 2 min en microondas. Huevos duros hechos la noche anterior.</div>
-    </div>
-    <div class="sec-header" style="margin-top:20px">Comida mediodía</div>
     <div class="card" style="border-color:#2d6a3f">
-      <div class="meal-header"><div class="meal-num" style="background:#1a3a2a;border-color:var(--green);color:var(--green)">SAB</div><div><div class="meal-title">Sábado — Comida libre</div><div class="meal-sub">Come lo que quieras. Solo esta vez a la semana.</div></div></div>
-      <div style="font-size:13px;color:var(--muted)">Pasta, pizza, lo que te apetezca. Es psicológicamente necesario. Solo el sábado mediodía, una vez.</div>
-    </div>
-    <div class="card">
-      <div class="meal-header"><div class="meal-num" style="background:var(--amber-dim);border-color:var(--amber);color:var(--amber)">DOM</div><div><div class="meal-title">Domingo — Igual que entre semana</div><div class="meal-sub">Después de comer, 1 hora de meal prep</div></div></div>
+      <div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:12px">Sábado</div>
+      <div class="sec-header" style="margin-top:0">Desayuno — antes de las 11h</div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">160g</div><div class="qty-name">Carne (en crudo)</div></div>
-        <div class="qty-box"><div class="qty-val">90g</div><div class="qty-name">Arroz o pasta (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">Sin límite</div><div class="qty-name">Verdura</div></div>
+        <div class="qty-box"><div class="qty-val">60g</div><div class="qty-name">Avena Brüggen</div></div>
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego</div></div>
+        <div class="qty-box"><div class="qty-val">2 unidades</div><div class="qty-name">Huevos revueltos</div></div>
       </div>
+      <div class="sec-header">Comida mediodía — comida libre</div>
+      <div style="font-size:13px;color:var(--muted)">Come lo que quieras en casa sin pasarte. Es tu recompensa semanal. Solo esta vez.</div>
+      <div class="sec-header">Cena</div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego</div></div></div>
+    </div>
+
+    <div class="card" style="border-color:var(--amber)">
+      <div style="font-size:14px;font-weight:700;color:var(--amber);margin-bottom:12px">Domingo</div>
+      <div class="sec-header" style="margin-top:0">Desayuno — antes de las 11h</div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">60g</div><div class="qty-name">Avena Brüggen</div></div>
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego</div></div>
+        <div class="qty-box"><div class="qty-val">2 unidades</div><div class="qty-name">Huevos revueltos</div></div>
+      </div>
+      <div class="sec-header">Durante el día — leche</div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">2 vasos (500ml)</div><div class="qty-name">Leche entera → ~15g prot · 315 kcal</div></div></div>
+      <div class="sec-header">Comida mediodía</div>
+      <div class="qty-grid">
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Pechuga o picada</div></div>
+        <div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Patata cocida</div></div>
+        <div class="qty-box"><div class="qty-val">Sin límite</div><div class="qty-name">Ensalada</div></div>
+      </div>
+      <div class="sec-header">Tarde</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:12px">Meal prep 1 hora para tener toda la semana lista.</div>
+      <div class="sec-header">Cena</div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">200g</div><div class="qty-name">Yogur griego</div></div></div>
+      <div class="tip" style="margin-top:10px">El domingo el cuerpo descansa y gasta menos (~2,200 kcal). Comiendo esto estás casi en equilibrio calórico, que es lo correcto para que el músculo se recupere del gym de la semana.</div>
     </div>
   </div>
 
-  <!-- SI TIENES HAMBRE -->
   <div id="hambre" class="food-section">
     <div class="tip">Solo estas opciones. Todas sacian sin romper el déficit.</div>
     <div class="card">
       <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">Fruta entera</div><div class="meal-sub">Mejor opción para el antojo dulce</div></div></div>
-      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 pieza mediana</div><div class="qty-name">Manzana, naranja o pera</div></div></div>
-      <div class="how">Masticar fruta entera sacia más que zumo. Corta el antojo de dulce sin disparar el azúcar.</div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 pieza mediana</div><div class="qty-name">Manzana, naranja o pera · ~80 kcal</div></div></div>
     </div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Segundo yogur griego</div><div class="meal-sub">Si la cena no fue suficiente</div></div></div>
-      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 unidad (125g)</div><div class="qty-name">Yogur griego 0%</div></div></div>
-      <div class="how">Sin arándanos si ya los tomaste. La proteína sacia de verdad.</div>
+      <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">Gelatina 0% azúcar Hacendado</div><div class="meal-sub">Para el antojo dulce de noche — 1 kcal, 0 proteína, no hace daño</div></div></div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 unidad (100g)</div><div class="qty-name">~1 kcal · 0g proteína</div></div></div>
+      <div class="how">No aporta proteína pero tampoco rompe nada. Úsala como postre extra, nunca en lugar del yogur.</div>
     </div>
     <div class="card">
       <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">Té o infusión sin azúcar</div><div class="meal-sub">Muchas veces el hambre nocturna es ansiedad</div></div></div>
-      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 taza grande</div><div class="qty-name">Té, manzanilla o rooibos</div></div></div>
-      <div class="how">Sin azúcar, sin miel. El calor llena el estómago y engaña al cerebro que busca el ritual de comer algo.</div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">1 taza grande</div><div class="qty-name">Té, manzanilla o rooibos · ~0 kcal</div></div></div>
     </div>
-    <div class="warn">Truco más importante: si no está en casa no puedes comerlo. No compres palomitas, pastel ni galletas dulces.</div>
+    <div class="warn">Si no está en casa no puedes comerlo. No compres palomitas, pastel ni galletas dulces.</div>
   </div>
 
-  <!-- MEAL PREP -->
   <div id="prep" class="food-section">
-    <div class="tip">Domingo 1 hora. Sin este paso el lunes ya estás improvisando y la dieta se rompe. Orden: mete la pechuga al horno primero, mientras haces la boloñesa y hierves el arroz.</div>
+    <div class="tip">Domingo 1 hora. Sin esto el lunes ya estás improvisando. Orden: mete la pechuga al horno primero, mientras haces la boloñesa y hierves el arroz.</div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">1kg pechuga al horno</div><div class="meal-sub">Para lunes, martes y miércoles</div></div><span class="meal-time">25 min horno</span></div>
+      <div class="meal-header"><div class="meal-num">1</div><div><div class="meal-title">1kg pechuga al horno</div><div class="meal-sub">Para lunes, martes, miércoles</div></div><span class="meal-time">25 min horno</span></div>
       <div class="qty-grid">
         <div class="qty-box"><div class="qty-val">1kg</div><div class="qty-name">Pechuga fileteada</div></div>
         <div class="qty-box"><div class="qty-val">2 dientes</div><div class="qty-name">Ajo picado</div></div>
-        <div class="qty-box"><div class="qty-val">2 cucharadas soperas</div><div class="qty-name">Aceite de oliva</div></div>
+        <div class="qty-box"><div class="qty-val">2 cdas soperas</div><div class="qty-name">Aceite de oliva</div></div>
         <div class="qty-box"><div class="qty-val">Al gusto</div><div class="qty-name">Orégano + sal + pimienta</div></div>
       </div>
-      <div class="how">Marina 10 min. Horno 200° durante 20-25 min. Enfría, corta en trozos, tupper hermético. 4 días en nevera.</div>
+      <div class="how">Marina 10 min. Horno 200° 20-25 min. Enfría, corta, tupper hermético. 4 días en nevera.</div>
     </div>
     <div class="card">
       <div class="meal-header"><div class="meal-num">2</div><div><div class="meal-title">1kg boloñesa de ternera</div><div class="meal-sub">Para jueves y viernes</div></div><span class="meal-time">15 min</span></div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">1kg</div><div class="qty-name">Carne picada de ternera</div></div>
+        <div class="qty-box"><div class="qty-val">1kg</div><div class="qty-name">Carne picada ternera</div></div>
         <div class="qty-box"><div class="qty-val">1 bote (400g)</div><div class="qty-name">Tomate frito</div></div>
         <div class="qty-box"><div class="qty-val">2 dientes</div><div class="qty-name">Ajo picado</div></div>
         <div class="qty-box"><div class="qty-val">Al gusto</div><div class="qty-name">Sal + orégano</div></div>
       </div>
-      <div class="how">Sartén grande a fuego medio, carne desmenuzándola. Cuando no esté rosa añade ajo y tomate. 5 min más. 4 días en nevera.</div>
+      <div class="how">Sartén a fuego medio, carne desmenuzada hasta que no esté rosa. Añade ajo y tomate, 5 min más. 4 días en nevera.</div>
     </div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">500g arroz hervido</div><div class="meal-sub">Para toda la semana</div></div><span class="meal-time">20 min</span></div>
+      <div class="meal-header"><div class="meal-num">3</div><div><div class="meal-title">Pasta integral hervida</div><div class="meal-sub">Para toda la semana</div></div><span class="meal-time">13 min</span></div>
       <div class="qty-grid">
-        <div class="qty-box"><div class="qty-val">500g</div><div class="qty-name">Arroz largo (en seco)</div></div>
-        <div class="qty-box"><div class="qty-val">1 litro</div><div class="qty-name">Agua con sal</div></div>
+        <div class="qty-box"><div class="qty-val">500g</div><div class="qty-name">Pasta integral (en seco)</div></div>
+        <div class="qty-box"><div class="qty-val">Agua con sal</div><div class="qty-name">11-13 min hirviendo</div></div>
       </div>
-      <div class="how">Hierve 18-20 min a fuego medio. Escurre, enfría con agua fría. Tupper grande. 5 días en nevera.</div>
+      <div class="how">Escurre, enfría con agua fría. Tupper grande. 5 días en nevera.</div>
     </div>
     <div class="card">
-      <div class="meal-header"><div class="meal-num">4</div><div><div class="meal-title">6 huevos duros</div><div class="meal-sub">Para el almuerzo del trabajo</div></div><span class="meal-time">12 min</span></div>
-      <div class="qty-grid"><div class="qty-box"><div class="qty-val">6 unidades</div><div class="qty-name">Huevos con cáscara</div></div></div>
-      <div class="how">Agua hirviendo, mete los huevos 10-12 min. Enfría en agua fría. Guarda con cáscara. 1 semana en nevera.</div>
+      <div class="meal-header"><div class="meal-num">4</div><div><div class="meal-title">6 huevos duros</div><div class="meal-sub">Para el almuerzo del trabajo lunes a miércoles</div></div><span class="meal-time">12 min</span></div>
+      <div class="qty-grid"><div class="qty-box"><div class="qty-val">6 unidades</div><div class="qty-name">Huevos con cáscara · 1 semana en nevera</div></div></div>
+      <div class="how">Agua hirviendo, 10-12 min. Enfría en agua fría. Guarda con cáscara, los llevas al trabajo sin problema.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROTEÍNA -->
+<div id="proteina" class="page">
+  <div class="info">Esta pestaña es para el futuro, cuando ya tengas el hábito formado. Los primeros 1-2 meses no necesitas nada de esto.</div>
+
+  <div class="sec-header">Tu situación actual</div>
+  <div class="card">
+    <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:12px">¿Llegas al objetivo de proteína?</div>
+    <table class="prot-table">
+      <tr><th>Producto (etiqueta real)</th><th>Proteína/100g</th><th>Kcal/100g</th></tr>
+      <tr><td>Avena Brüggen</td><td class="prot-val">14g</td><td>375 kcal</td></tr>
+      <tr><td>Yogur griego Hacendado 1kg</td><td class="prot-val">5.8g</td><td>60 kcal</td></tr>
+      <tr><td>Yogur natural Hacendado</td><td class="prot-val">10g</td><td>52 kcal</td></tr>
+      <tr><td>Huevos frescos</td><td class="prot-val">12.5g</td><td>150 kcal</td></tr>
+      <tr><td>Pan de fibra y sésamo</td><td class="prot-val">13g</td><td>391 kcal</td></tr>
+      <tr><td>Hummus Hacendado</td><td class="prot-val">5.7g</td><td>313 kcal</td></tr>
+      <tr><td>Leche entera</td><td class="prot-val">3.1g</td><td>63 kcal</td></tr>
+      <tr><td>Pechuga de pollo (internet)</td><td class="prot-val">21g</td><td>98 kcal</td></tr>
+      <tr><td>Carne picada ternera (internet)</td><td class="prot-val">23.5g</td><td>142 kcal</td></tr>
+      <tr><td>Pasta integral Hacendado</td><td class="prot-val">13.5g</td><td>345 kcal</td></tr>
+      <tr><td>Arroz basmati Hacendado</td><td class="prot-val">9g</td><td>355 kcal</td></tr>
+    </table>
+    <div class="tip" style="margin-top:12px">Con tu dieta actual llegas a ~143-148g de proteína al día entre semana. Para tu peso (105kg) el objetivo es 1.4-1.6g/kg = 147-168g. Estás muy cerca sin suplementos.</div>
+  </div>
+
+  <div class="sec-header" style="margin-top:24px">Creatina monohidrato — para el mes 2-3</div>
+  <div class="card" style="border-color:#2d6a3f">
+    <div style="display:flex;align-items:flex-start;gap:14px">
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--amber-dim);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">⚡</div>
+      <div style="flex:1">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+          <div style="font-size:15px;font-weight:700;color:#fff">Creatina monohidrato</div>
+          <span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;background:var(--green-dim);color:var(--green);border:1px solid #2d6a3f">Recomendado</span>
+          <span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;background:var(--amber-dim);color:var(--amber)">Empezar mes 2-3</span>
+        </div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px">El suplemento más estudiado del mundo. Ayuda a rendir más en los entrenamientos, no engorda y es muy barato. No lo necesitas el primer mes, cuando ya tengas el hábito formado lo añades sin problema.</div>
+        <div class="qty-grid">
+          <div class="qty-box"><div class="qty-val">3-5g al día</div><div class="qty-name">Dosis diaria</div></div>
+          <div class="qty-box"><div class="qty-val">Cualquier hora</div><div class="qty-name">Con agua o zumo</div></div>
+          <div class="qty-box"><div class="qty-val">~15-20€/mes</div><div class="qty-name">Precio aprox</div></div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;margin-top:10px">
+          <div style="font-size:12px;font-weight:600;color:var(--amber);margin-bottom:4px">Cómo tomarlo</div>
+          <div style="font-size:12px;color:var(--muted)">Una cucharadita rasa (3-5g) disueltos en agua, zumo o leche. La hora no importa, lo que importa es tomarlo todos los días sin saltarte ninguno. Los primeros 7-10 días puedes notar una ligera retención de agua, es normal y desaparece.</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;margin-top:8px">
+          <div style="font-size:12px;font-weight:600;color:var(--green);margin-bottom:4px">Dónde comprarlo</div>
+          <div style="font-size:12px;color:var(--muted)">Myprotein, HSN o Amazon. Busca "creatina monohidrato micronizada". La marca no importa, el compuesto es el mismo. Formato polvo, no pastillas.</div>
+        </div>
+      </div>
     </div>
   </div>
 
-</div><!-- fin comida -->
+  <div class="sec-header" style="margin-top:24px">Proteína en polvo (whey) — solo si no llegas</div>
+  <div class="card">
+    <div style="display:flex;align-items:flex-start;gap:14px">
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🥛</div>
+      <div style="flex:1">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+          <div style="font-size:15px;font-weight:700;color:#fff">Proteína en polvo (whey)</div>
+          <span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;background:var(--teal-dim);color:var(--teal)">Solo si no llegas con comida</span>
+        </div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px">Con tu dieta actual estás en ~143-148g de proteína, muy cerca del objetivo. No es obligatorio. Solo lo necesitas si en algún momento ves que te quedas corto o quieres optimizar más.</div>
+        <div class="qty-grid">
+          <div class="qty-box"><div class="qty-val">1 batido</div><div class="qty-name">Post-entreno o post-comida</div></div>
+          <div class="qty-box"><div class="qty-val">~25-30g</div><div class="qty-name">Proteína por batido</div></div>
+          <div class="qty-box"><div class="qty-val">~25-35€/mes</div><div class="qty-name">Precio aprox</div></div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;margin-top:10px">
+          <div style="font-size:12px;font-weight:600;color:var(--green);margin-bottom:4px">Dónde comprarlo si lo necesitas</div>
+          <div style="font-size:12px;color:var(--muted)">Myprotein Impact Whey o HSN WPC. Sabor chocolate o vainilla para empezar. Evita los que tienen más de 5g de azúcar por ración.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-header" style="margin-top:24px">Suplementos que no necesitas</div>
+  <div class="card" style="opacity:0.5">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <div style="width:32px;height:32px;border-radius:8px;background:#3a0f0f;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🚫</div>
+      <div style="font-size:14px;font-weight:700;color:#fff">Quemadores de grasa / termogénicos</div>
+    </div>
+    <div style="font-size:12px;color:var(--muted)">La mayoría son cafeína cara. Tu quemador de grasa es el déficit calórico y el entrenamiento.</div>
+  </div>
+  <div class="card" style="opacity:0.5">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <div style="width:32px;height:32px;border-radius:8px;background:#3a0f0f;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🚫</div>
+      <div style="font-size:14px;font-weight:700;color:#fff">Gainers / hipercalóricos</div>
+    </div>
+    <div style="font-size:12px;color:var(--muted)">Son para personas que no llegan a comer suficiente. En tu caso es lo contrario de lo que necesitas.</div>
+  </div>
+  <div class="card" style="opacity:0.5">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <div style="width:32px;height:32px;border-radius:8px;background:#3a0f0f;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🚫</div>
+      <div style="font-size:14px;font-weight:700;color:#fff">Pre-entrenos estimulantes</div>
+    </div>
+    <div style="font-size:12px;color:var(--muted)">Generan dependencia. Si quieres energía pre-entreno, una fruta 30 min antes es suficiente.</div>
+  </div>
+</div>
 
 </main>
 
